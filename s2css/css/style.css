@@ -1,0 +1,66 @@
+
+/*Selector universal: selecciona todos los elementos del documento */
+*{
+    color: #000;
+}
+
+
+/*Selector por tagname: selecciona todos los 
+elementos curyo tag name sea igual al declararlo*/
+body{
+    border: red solid 2px;
+    padding: 20px;
+    margin: 0px;
+}
+header{
+    background-color: cyan;
+    border: pink solid 2px;
+    padding: 8px;
+}
+nav{
+    background-color: magenta;
+    border: #f334d0 solid 2px;
+    margin: 0px 20px;
+}
+main{
+    margin: 20px 0px;
+    display: flex;
+    gap: 12px;
+}
+section{
+    flex: 1;
+    background-color: dodgerblue;
+    border: black solid 2px;    
+    padding: 8px;
+}
+aside{
+    flex: 1;
+    background-color: #f7819f;
+    max-width: 20%;
+    padding: 8px;
+    border: black solid 2px;
+}
+article{
+    
+    background-color: plum;
+    min-height: 100px;
+}
+footer{
+    background-color: #cecef6;
+    border: blue solid 2px;
+    min-height: 50px;    
+}
+/*Selector por clase: selecciona todos los 
+elementos que tengan el nombre de la clase en su atributo class*/
+.green-button{
+    background-color: green;
+}
+.red-button{
+    background-color: red;
+}
+
+/* Selector por id: selecciona el unico elemento que coincida con el id indicado*/
+#main-title{
+    font-weight: bold;
+    text-transform: uppercase;
+}
