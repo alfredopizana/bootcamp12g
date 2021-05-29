@@ -1,0 +1,58 @@
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    margin:0px;
+}
+main{
+    background-color: green;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.circle{
+    background-color: cyan;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: red solid 1px;
+    position: absolute;
+}
+.circle-peru{
+    background-color: peru;
+}
+
+.circle-top{
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle-right{
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.circle-bottom{
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle-left{
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.square{
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
