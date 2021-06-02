@@ -1,0 +1,43 @@
+@keyframes full-rotation{
+    0%{
+     transform: rotate(0deg);
+    } 
+    100%{
+     transform: rotate(360deg);
+    }
+ }
+ 
+ .line{
+     margin-top: 120px;
+     width: 100px;
+     border: 1px solid red;
+     height: 10px;
+     background-color: red;
+     transform: rotate(0deg);
+     transform-origin: 100% 50%;
+ }/*
+ .line::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    border: 1px solid red;
+    height: 200px;
+    transform-origin: 0% 0%;
+    transform: translate(0%,-50%);
+    border-radius: 50%;
+}*/
+ input#toggle-animation:checked ~ .line{
+     animation: full-rotation 3s infinite linear;
+ }
+ input#toggle-animation::after{
+     content: "Start Animation";
+     position: relative;
+     left: 15px;
+ 
+ }
+ input#toggle-animation:checked::after{
+     content: "Stop Animation";
+ }
+ 
