@@ -1,0 +1,60 @@
+//Global Variables
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white : hsla(0, 0%, 100%, 0.75); // (paragraphs)
+$very-light-gray : hsl(0, 0%, 95%); //(background, headings, buttons)
+
+
+$cards: (sedans: $bright-orange, suvs: $dark-cyan, luxury: $very-dark-cyan);
+
+*{
+    box-sizing:content-box;
+}
+body{
+    margin: 0px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    .card{
+        padding: 30px;
+        h2{
+            font-family: 'Big Shoulders Display', cursive;
+            font-weight: 700;
+        }
+        p{
+            color: $transparent-white;
+            letter-spacing: 2px;
+            line-height: 200%;
+        }
+        button{
+            padding: 15px 40px;
+            border-radius: 100px;
+            background-color: white;
+            border: none;
+        }
+        @each $name,$color in $cards{
+            &.card-#{$name}{
+                background-color: $color;
+                button{
+                    color: $color;
+                }
+            }
+        }
+    }
+
+}
+
+// @media screen and (min-width:768px) {
+//     main{
+//         width: 1440px;
+//         flex-direction: ;
+//     }
+// }

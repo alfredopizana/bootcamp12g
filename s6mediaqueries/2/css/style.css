@@ -1,0 +1,71 @@
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+main {
+  width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+}
+
+main .card {
+  padding: 30px;
+}
+
+main .card h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+}
+
+main .card p {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2px;
+  line-height: 200%;
+}
+
+main .card button {
+  padding: 15px 40px;
+  border-radius: 100px;
+  background-color: white;
+  border: none;
+}
+
+main .card.card-sedans {
+  background-color: #e38826;
+}
+
+main .card.card-sedans button {
+  color: #e38826;
+}
+
+main .card.card-suvs {
+  background-color: #006970;
+}
+
+main .card.card-suvs button {
+  color: #006970;
+}
+
+main .card.card-luxury {
+  background-color: #004241;
+}
+
+main .card.card-luxury button {
+  color: #004241;
+}
+/*# sourceMappingURL=style.css.map */

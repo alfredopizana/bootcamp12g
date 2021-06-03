@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+header{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px #ddd solid;
+}
+header nav{
+    width: 50%;
+}
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+header nav ul li{
+    padding:0 1rem;
+    border-right: 1px black solid;
+}
+header nav ul li:last-child{
+    border-right: none;
+}
+main{
+    margin-top: 15px;
+    max-width: 1170px;
+    display: flex;
+    margin: 15px auto;
+    border:1px solid #ddd ;
+    border-radius: 5px;
+    padding: 15px;
+    
+    
+}
+main section{
+    width: 70%;
+    border-right: 1px solid #ddd;
+}
+main section article{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+main aside{
+    width: 30%;
+}
+main aside ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
