@@ -9,7 +9,7 @@ $very-light-gray : hsl(0, 0%, 95%); //(background, headings, buttons)
 $cards: (sedans: $bright-orange, suvs: $dark-cyan, luxury: $very-dark-cyan);
 
 *{
-    box-sizing:content-box;
+    box-sizing:border-box;
 }
 body{
     margin: 0px;
