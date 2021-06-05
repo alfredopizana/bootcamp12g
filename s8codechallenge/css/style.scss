@@ -15,13 +15,114 @@ body{
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
 }
+
+/* Flex card */
+.flex-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ccc;
+    padding: 50px;
+    
+    .flex-card-content{
+        width: auto;
+        max-width: 500px;
+        >*{
+            margin-bottom: 25px;
+        }
+        button{
+            padding:12px;
+            border: 5px;
+            &.btn-primary{
+                background-color: $soft-blue;
+            }
+        }
+    }
+    .flex-card-image{
+        width: auto;
+        max-width: 500px;
+    }
+}
+@media only screen and (min-width:768px){
+
+    .flex-card{
+        flex-direction: row;
+    }
+    
+}
+/* End of Flex Card */
+
 /* Header */
 
+header{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    justify-content: space-between;          
+    align-items: center;    
+    background-color: white;
+    top:0;
+    left:0;
+    right:0;
+    padding-left: 5%;
+    padding-right: 5%;
+    .header-logo{
+        height: 20px ;        
+
+    }
+    nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;          
+        ul{
+            display: none;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:768px){
+
+    header{
+        nav{
+            
+            display: flex;
+            justify-content: flex-end;
+            
+
+            .header-nav-hamburguer {
+                display: none;
+            }
+
+            ul{
+                
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                list-style: none;
+
+                li{
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    font-family: 'Rubik', sans-serif;                     
+                }
+                
+            }
+
+        }
+    }
+
+
+}
 
 
 /* End of Header*/
 
 /* Section:Hero Banner */
+
+
 
 
 
@@ -59,7 +160,7 @@ body{
                 flex-direction: column;
                 display: flex;
                 align-items: center;
-                
+
                 img{
                 padding: 30px;
                 }
