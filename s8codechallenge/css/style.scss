@@ -337,6 +337,164 @@ header{
 
 /* Footer */
 
+footer{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    width:100vw;    
+
+    .contact-us{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        width: 100%;
+        background-color: $soft-blue;                       
+
+        p{
+            color:white;
+            font-size: 1.7em;
+            text-align: center;
+
+            &.footer-titulo{
+
+                font-family: 'Rubik', sans-serif;
+                color: white;
+                letter-spacing: 10px ;
+                font-size: 15px;
+                text-align: center;
+            }
+
+        }
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            input{
+
+
+            }
+            button{
+
+                background-color: $soft-red;
+                color:white;
+                width: 40%;
+                border-radius: 5px;                
+            }
+        }
+
+        
+    }
+
+    .footer-links{
+         background-color: $very-dark-blue;
+         font-family: 'Rubik', sans-serif;
+         letter-spacing: 4px;
+         font-size: 15px;
+         display:flex;
+         flex-direction: column;
+         width: 100%;
+
+        .footer-list-wrapper{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: none;
+                    
+                    li{
+                        color:$grayish-blue;
+                        padding-top: 1.5rem;
+                        
+                    }
+
+                }
+            }        
+
+         .footer-social-wrapper{
+            display: flex;     
+            justify-content: center; 
+            padding-bottom: 1rem;           
+            img{
+                padding: 1rem ;
+            }
+
+        }
+                             
+    }
+
+}
+
+
+
+@media only screen and (min-width:768px){
+
+    footer{
+
+            
+       .footer-links{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
+
+            .footer-list-wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    li{
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+
+                    }
+
+                }
+
+
+
+
+            }
+
+            .footer-social-wrapper{
+                      
+                img{
+
+                }
+            }    
+
+           
+            
+
+       }
+
+    }
+
+}
+
 
 
 /* End of Footer */
