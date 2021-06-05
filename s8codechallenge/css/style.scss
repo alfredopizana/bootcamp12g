@@ -172,12 +172,39 @@ header{
                 flex-direction: row;
                 justify-content: space-between;
                 list-style: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                
 
                 li{
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    font-family: 'Rubik', sans-serif;                     
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    font-family: 'Rubik', sans-serif;         
+                    font-size: 11px;     
+                    height: 30px;                    
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 1px ;
+                    color:black;
+                    
+                    a {
+                        text-decoration: none;
+
+                    }
                 }
+
+                .login{
+                    background-color: hsl(0, 94%, 66%);; 
+                    color:white;
+                    border: 1px solid hsl(0, 94%, 66%);;
+                    border-radius: 5px;
+                    box-shadow:  1px 4px 7px 0px #9194a1;
+
+                    a{
+                        color:white;
+                    }
+             }
+             
                 
             }
 
