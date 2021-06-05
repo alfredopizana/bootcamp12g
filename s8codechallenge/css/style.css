@@ -16,9 +16,82 @@ body {
 /* End of Header*/
 /* Section:Hero Banner */
 /* End of Hero Banner */
-/* Features */
 /* End of Features */
 /* Extensions */
+.extensions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.extensions h2 {
+  text-align: center;
+}
+
+.extensions p {
+  color: #9194a1;
+  text-align: center;
+  padding: 10px;
+}
+
+.extensions .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 10px;
+}
+
+.extensions .cards .card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.extensions .cards .card-wrapper .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.extensions .cards .card-wrapper .card img {
+  padding: 30px;
+}
+
+.extensions .cards .card-wrapper .card button {
+  background-color: #5368df;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 /* End of Extensions */
 /* FAQs */
 /* End of FAQs */

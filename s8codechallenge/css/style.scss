@@ -27,14 +27,57 @@ body{
 
 /* End of Hero Banner */
 
-/* Features */
 
 
 
 /* End of Features */
 
 /* Extensions */
+.extensions{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    h2{
+    text-align: center;
+    }
+    p{
+    color: $grayish-blue;   
+    text-align: center;
+    padding: 10px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding: 10px;
+        .card-wrapper{
+            display: flex;
+            justify-content: center;
+            .card{
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                
+                img{
+                padding: 30px;
+                }
+                button{
+                background-color: $soft-blue;
+                color: white;
+                width: 200px;
+                height: 40px;
+                border-radius: 5px;
+                font-weight: bold;
+                }
+            }
+          
 
+        }
+    }
+
+}
 
 
 /* End of Extensions */
