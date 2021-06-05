@@ -206,11 +206,37 @@ header nav ul {
         -ms-flex-pack: justify;
             justify-content: space-between;
     list-style: none;
-  }
-  header nav ul li {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  header nav ul li {
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-family: 'Rubik', sans-serif;
+    font-size: 11px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    letter-spacing: 1px;
+    color: black;
+  }
+  header nav ul li a {
+    text-decoration: none;
+  }
+  header nav ul .login {
+    background-color: #fa5757;
+    color: white;
+    border: 1px solid #fa5757;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 4px 7px 0px #9194a1;
+            box-shadow: 1px 4px 7px 0px #9194a1;
+  }
+  header nav ul .login a {
+    color: white;
   }
 }
 
