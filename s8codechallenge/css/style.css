@@ -11,6 +11,7 @@ body {
   color: #252b46;
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
+  padding-top: 60px;
 }
 
 /* Flex card */
@@ -133,6 +134,80 @@ body {
 
 /* End of Flex Card */
 /* Header */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 99;
+}
+
+header .header-logo {
+  height: 20px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header nav .header-nav-hamburguer {
+    display: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+  }
+  header nav ul li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
 /* End of Header*/
 /* Section:Hero Banner */
 .hero-banner {
@@ -149,7 +224,6 @@ body {
 }
 
 /* End of Hero Banner */
-/* Features */
 .features {
   margin-bottom: 5rem;
 }
@@ -166,6 +240,80 @@ body {
 
 /* End of Features */
 /* Extensions */
+.extensions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.extensions h2 {
+  text-align: center;
+}
+
+.extensions p {
+  color: #9194a1;
+  text-align: center;
+  padding: 10px;
+}
+
+.extensions .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 10px;
+}
+
+.extensions .cards .card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.extensions .cards .card-wrapper .card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.extensions .cards .card-wrapper .card img {
+  padding: 30px;
+}
+
+.extensions .cards .card-wrapper .card button {
+  background-color: #5368df;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 /* End of Extensions */
 /* FAQs */
 /* End of FAQs */

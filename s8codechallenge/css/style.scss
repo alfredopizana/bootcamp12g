@@ -18,6 +18,7 @@ body{
     color: $very-dark-blue;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
+    padding-top: 60px;
 }
 
 /* Flex card */
@@ -123,6 +124,68 @@ body{
 
 /* Header */
 
+header{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    justify-content: space-between;          
+    align-items: center;    
+    background-color: white;
+    top:0;
+    left:0;
+    right:0;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 99;
+    .header-logo{
+        height: 20px ;        
+
+    }
+    nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;          
+        ul{
+            display: none;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:768px){
+
+    header{
+        nav{
+            
+            display: flex;
+            justify-content: flex-end;
+            
+
+            .header-nav-hamburguer {
+                display: none;
+            }
+
+            ul{
+                
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                list-style: none;
+
+                li{
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    font-family: 'Rubik', sans-serif;                     
+                }
+                
+            }
+
+        }
+    }
+
+
+}
 
 
 /* End of Header*/
@@ -155,7 +218,6 @@ body{
 
 /* End of Hero Banner */
 
-/* Features */
 
 .features{
     margin-bottom: 5rem;
@@ -191,7 +253,51 @@ body{
 /* End of Features */
 
 /* Extensions */
+.extensions{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    h2{
+    text-align: center;
+    }
+    p{
+    color: $grayish-blue;   
+    text-align: center;
+    padding: 10px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding: 10px;
+        .card-wrapper{
+            display: flex;
+            justify-content: center;
+            .card{
+                flex-direction: column;
+                display: flex;
+                align-items: center;
 
+                img{
+                padding: 30px;
+                }
+                button{
+                background-color: $soft-blue;
+                color: white;
+                width: 200px;
+                height: 40px;
+                border-radius: 5px;
+                font-weight: bold;
+                }
+            }
+          
+
+        }
+    }
+
+}
 
 
 /* End of Extensions */
