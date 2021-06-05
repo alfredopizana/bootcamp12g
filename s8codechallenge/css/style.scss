@@ -26,14 +26,14 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
-    align-items: flex-start;
+    align-items: center;
     padding: 00px;
 
     .flex-card-content{
         width: auto;
         max-width: auto;
-        padding: 50px 50px 50px 150px;
         text-align: left;
+        max-width: 600px;
         >*{
             margin-bottom: 25px;
         }
@@ -57,9 +57,9 @@ body{
     .flex-card-image{
         position: relative;
         width: auto;
-        max-width: auto;
         width: 100%;
-
+        display: flex;
+        justify-content: center;
         img{
 
             max-width: 100%;
@@ -99,6 +99,7 @@ body{
         flex-direction: row;
         .flex-card-content{
             max-width: 50%;
+            padding: 50px 50px 50px 150px;
             h2{
                 font-size: 2rem;
             }
@@ -193,7 +194,8 @@ header{
 /* Section:Hero Banner */
 
 .hero-banner{
-    margin-bottom: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     .flex-card{
     }
 }
@@ -202,6 +204,8 @@ header{
 @media only screen and (min-width:1000px){
 
     .hero-banner{
+        margin-top: 8rem;
+        margin-bottom: 8rem;
         text-align: center;
         
         .flex-card{
@@ -218,7 +222,7 @@ header{
 
 /* End of Hero Banner */
 
-
+/* Features */
 .features{
     margin-bottom: 5rem;
     .flex-card{
