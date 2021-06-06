@@ -124,8 +124,9 @@ $slide-items-number:3;
 .slider{
     margin-top: 4rem;
     text-align: center;
+    width: 100%;
     .flex-cards-wrapper{
-        width: 100vw;
+        width: 100%;
 
         display: block;
         position: relative;
@@ -327,6 +328,7 @@ header{
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
+    width: 100%;
     >h2{
         
         max-width: 50%;
@@ -435,7 +437,6 @@ footer{
     justify-content: center;
     align-items: center;
     color:white;
-    width: 100vw;
      
 
         .footer-contact{
@@ -530,6 +531,11 @@ footer{
                 align-items: center;
                 padding: 2rem;
 
+                .footer-list-wrapper-image{
+                    svg path{
+                        fill: white;
+                    }
+                }
 
                 ul{
                     display: flex;
