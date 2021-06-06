@@ -306,10 +306,10 @@ header nav ul {
         -ms-flex-align: center;
             align-items: center;
     letter-spacing: 1px;
-    color: black;
   }
   header nav ul li a {
     text-decoration: none;
+    color: black;
   }
   header nav ul .login {
     background-color: #fa5757;
