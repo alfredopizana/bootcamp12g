@@ -509,6 +509,22 @@ footer .footer-contact .contact-us form #email {
           box-sizing: border-box;
 }
 
+footer .footer-contact .contact-us form input::-webkit-input-placeholder {
+  color: lightgrey;
+}
+
+footer .footer-contact .contact-us form input:-ms-input-placeholder {
+  color: lightgrey;
+}
+
+footer .footer-contact .contact-us form input::-ms-input-placeholder {
+  color: lightgrey;
+}
+
+footer .footer-contact .contact-us form input::placeholder {
+  color: lightgrey;
+}
+
 footer .footer-contact .contact-us form button {
   width: 100%;
   background-color: #fa5757;
@@ -623,26 +639,10 @@ footer .footer-links .footer-social-wrapper img {
             align-items: center;
   }
   footer .footer-contact .contact-us form #email {
-    width: 60%;
-    /*
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        display: unset;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        box-sizing: border-box;                        
-                        */
+    width: 70%;
   }
   footer .footer-contact .contact-us form button {
-    width: 30%;
-    /*
-                        background-color: $soft-red;
-                        color:white;   
-                        padding: 12px 20px;             
-                        border-radius: 5px;  
-                        margin: 8px 0;
-                        border:none
-                        */
+    width: 25%;
   }
   footer .footer-links {
     display: -webkit-box;
@@ -655,7 +655,6 @@ footer .footer-links .footer-social-wrapper img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    /*align-items: flex-start;        */
     padding-left: 5%;
   }
   footer .footer-links .footer-list-wrapper {
@@ -669,8 +668,6 @@ footer .footer-links .footer-social-wrapper img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    /*justify-content: flex-start;*/
-    /*align-items: center;*/
   }
   footer .footer-links .footer-list-wrapper .footer-list-wrapper-image {
     padding: 0;
@@ -684,9 +681,6 @@ footer .footer-links .footer-social-wrapper img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-  }
-  footer .footer-links .footer-list-wrapper .footer-list-wrapper-image img {
-    border: 1px solid white;
   }
   footer .footer-links .footer-list-wrapper ul {
     display: -webkit-box;
