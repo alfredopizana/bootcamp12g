@@ -374,27 +374,31 @@ header{
 
 /* Extensions */
 .extensions{
-    display: flex; 
-    justify-content: center;
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+
     h2{
     text-align: center;
     }
+
     p{
     color: $grayish-blue;   
     text-align: center;
     padding: 10px;
     }
+
     .cards{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-left: 10vw;
-        margin-right: 10vw;
         padding: 10px;
+
         .card-wrapper{
             display: flex;
             justify-content: center;
+
             .card{
                 flex-direction: column;
                 display: flex;
@@ -403,6 +407,7 @@ header{
                 img{
                 padding: 30px;
                 }
+
                 button{
                 background-color: $soft-blue;
                 color: white;
@@ -410,20 +415,75 @@ header{
                 height: 40px;
                 border-radius: 5px;
                 font-weight: bold;
+                @include global-box-sadow;
                 }
             }
-          
-
         }
     }
 
 }
 
+@media only screen and (min-width:768px){
+    .extensions{
+
+        p{
+           margin-left: 15%;
+           margin-right: 15%;
+           
+            }
+
+        .cards{
+
+        display: flex;
+        flex-direction: row;
+
+/*  width: 80%; */
+        
+
+        .card-wrapper{
+
+            &.fire{
+                margin-top: 50px;
+            }
+
+            &.opera{
+                margin-top: 100px;
+            }
+
+        }
+    }
+
+    }
+}
 
 /* End of Extensions */
 
 /* FAQs */
 
+.faq{
+
+    h2{
+        text-align: center;
+        padding: 20px;  
+        margin-top: 80px; 
+         }
+
+    p{
+        text-align: center; 
+        margin-left: 15px;
+        margin-right: 15px;  
+        padding-bottom: 100px;
+         }
+
+    .question{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }     
+
+
+}
 
 
 /* End of FAQs */
