@@ -14,6 +14,10 @@ body {
   padding-top: 60px;
 }
 
+p {
+  color: #9194a1;
+}
+
 /* Flex card */
 .flex-card {
   display: -webkit-box;
@@ -139,6 +143,32 @@ body {
 }
 
 /* End of Flex Card */
+/* Flex Slider */
+.slider {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.slider .slider-tab {
+  display: none;
+}
+
+.slider .slider-tab:checked + .slider-tab-label {
+  border-bottom: 3px solid #fa5757;
+}
+
+.slider .slider-tab-label {
+  padding: 15px 20px;
+}
+
+.slider .flex-cards {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* End Of Flex Slider*/
 /* Header */
 header {
   display: -webkit-box;
@@ -261,17 +291,45 @@ header nav ul {
 /* End of Hero Banner */
 /* Features */
 .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5rem;
 }
 
-.features .flex-card .flex-card-content {
-  padding: 15px;
+.features > h2 {
+  max-width: 50%;
+  margin-bottom: 15px;
 }
 
-@media only screen and (min-width: 768px) {
-  .features {
-    text-align: center;
-  }
+.features > p {
+  max-width: 50%;
+  margin-bottom: 15px;
+}
+
+.features input[name="slider"]#option-1:checked ~ .flex-cards > .flex-card:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features input[name="slider"]#option-2:checked ~ .flex-cards > .flex-card:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features input[name="slider"]#option-3:checked ~ .flex-cards > .flex-card:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* End of Features */

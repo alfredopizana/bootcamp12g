@@ -20,6 +20,9 @@ body{
     font-family: 'Rubik', sans-serif;
     padding-top: 60px;
 }
+p{
+    color: $grayish-blue;
+}
 
 /* Flex card */
 .flex-card{
@@ -121,7 +124,32 @@ body{
 
     
 }
+
 /* End of Flex Card */
+
+/* Flex Slider */
+.slider{
+    margin-top: 4rem;
+    text-align: center;
+    .slider-tab {
+        display: none;
+        &::after{
+
+        }
+        &:checked + .slider-tab-label{
+            border-bottom: 3px solid $soft-red;
+        }
+    }
+    .slider-tab-label{
+        padding: 15px 20px;
+    }
+
+    .flex-cards{
+        margin-top: 4rem;
+        display: flex;
+    }
+}
+/* End Of Flex Slider*/
 
 /* Header */
 
@@ -251,23 +279,42 @@ header{
 
 /* Features */
 .features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 5rem;
+    >h2{
+        
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
+    >p{
+        
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
     .flex-card{
         .flex-card-content{
-            padding: 15px;
+            // padding: 15px;
         }
         &.flex-card-reversed{
 
         }
     }
+    @for $i from 1 through 3 {
+        input[name="slider"]#option-#{$i}:checked ~ .flex-cards > .flex-card:nth-child(#{$i}){
+            display: flex;
+        }
+    }
+    
+
 }
     
 
 @media only screen and (min-width:768px){
 
     .features{
-        text-align: center;
-        
+
         .flex-card{
 
             .flex-card-content{
