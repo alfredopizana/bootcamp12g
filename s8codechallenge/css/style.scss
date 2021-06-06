@@ -348,60 +348,88 @@ footer{
     justify-content: center;
     align-items: center;
     color:white;
-    width:100vw;    
+    width: 100vw;
+     
 
-    .contact-us{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2em;
-        width: 100%;
-        background-color: $soft-blue;                       
+        .footer-contact{
 
-        p{
-            color:white;
-            font-size: 1.7em;
-            text-align: center;
-
-            &.footer-titulo{
-
-                font-family: 'Rubik', sans-serif;
-                color: white;
-                letter-spacing: 10px ;
-                font-size: 15px;
-                text-align: center;
-            }
-
-        }
-
-
-        form{
-            display: flex;
-            flex-direction: column;
+            background-color: $soft-blue; 
+            padding: 0;   
             width: 100%;
-            
-            input{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .contact-us{
+
+                display:flex;
+                flex-direction: column;
+                justify-content: center;  
+                align-items: center;                    
+                width: 80%;              
+                /*background-color: pink; */
+                padding-top:3rem;
+                padding-bottom:3rem;
+
+                p{
+                    color:white;
+                    font-size: 1.7em;
+                    text-align: center;
+
+                    &.footer-titulo{
+
+                        font-family: 'Rubik', sans-serif;
+                        color: white;
+                        letter-spacing: 10px ;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+
+                }
 
 
-            }
-            button{
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;   
+                    font-family: 'Rubik', sans-serif;
+                    
+                    #email{
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        box-sizing: border-box;                        
+                    }
+                    
+                
+                    button{
+                        width: 100%;
+                        background-color: $soft-red;
+                        color:white;   
+                        padding: 12px 20px;             
+                        border-radius: 5px;  
+                        margin: 8px 0;
+                        border:none
+                        
 
-                background-color: $soft-red;
-                color:white;
-                width: 40%;
-                border-radius: 5px;                
+                    }
+                }
+
+                
             }
         }
 
-        
-    }
 
     .footer-links{
          background-color: $very-dark-blue;
          font-family: 'Rubik', sans-serif;
          letter-spacing: 4px;
-         font-size: 15px;
+         font-size: 11px;
          display:flex;
          flex-direction: column;
          width: 100%;
@@ -422,7 +450,7 @@ footer{
                     list-style: none;
                     
                     li{
-                        color:$grayish-blue;
+                        color:white;
                         padding-top: 1.5rem;
                         
                     }
@@ -448,55 +476,117 @@ footer{
 
 @media only screen and (min-width:768px){
 
-    footer{
-
-            
-       .footer-links{
+    footer{       
         
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 70px;
 
-            .footer-list-wrapper{
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
+        .footer-contact{
 
-                ul{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .contact-us{
+                width: 40%;      
+                padding: 2em;      
+
+                form{
+                    
                     display: flex;
                     flex-direction: row;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     align-items: center;
-
-                    li{
-                        padding-left: 2rem;
-                        padding-right: 2rem;
-
+    
+                    #email{
+                        width: 60%;
+                        
+                        /*
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: unset;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        box-sizing: border-box;                        
+                        */
                     }
-
-                }
-
-
-
+                    
+                
+                    button{
+                        width: 30%;
+                        /*
+                        background-color: $soft-red;
+                        color:white;   
+                        padding: 12px 20px;             
+                        border-radius: 5px;  
+                        margin: 8px 0;
+                        border:none
+                        */
+                        
+    
+                    }
+                    
+    
+    
+                }                
 
             }
 
-            .footer-social-wrapper{
-                      
-                img{
-
-                }
-            }    
-
-           
             
+        }
 
+       .footer-links{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /*align-items: flex-start;        */
+            padding-left: 5%;        
+
+            .footer-list-wrapper{                
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;                
+                /*justify-content: flex-start;*/
+                /*align-items: center;*/                
+
+                .footer-list-wrapper-image{
+                    padding: 0;                    
+                    display: flex;
+                    flex-direction: row;                    
+                    align-items: flex-end;                    
+                    img{
+
+                        border: 1px solid white;                        
+                    }
+                }                
+
+                ul{                    
+                    display: flex;
+                    flex-direction: row;                    
+                    align-items: flex-start;
+                    
+                    li{                        
+                        padding:0;
+                        display: flex;
+                        align-items: flex-start;    
+                        flex-direction: row;                    
+                        justify-content: center;
+                        padding-left: 2rem;
+                        padding-right: 2rem;                        
+                    }
+                }
+            }
+
+            .footer-social-wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding-right: 10%;   
+            }    
        }
-
     }
-
 }
 
 
