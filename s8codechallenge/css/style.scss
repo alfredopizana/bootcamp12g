@@ -3,6 +3,7 @@ $soft-blue:     hsl(231, 69%, 60%);
 $soft-red:      hsl(0, 94%, 66%);
 $grayish-blue:  hsl(229, 8%, 60%);
 $very-dark-blue:  hsl(229, 31%, 21%);
+
 @mixin global-box-sadow{
     box-shadow: 1px 4px 7px 0px $grayish-blue;
 }
@@ -34,7 +35,6 @@ p{
 
     .flex-card-content{
         width: auto;
-        max-width: auto;
         text-align: left;
         max-width: 600px;
         >*{
@@ -80,8 +80,9 @@ p{
     }
     &.flex-card-reversed{
         flex-direction: column-reverse;
-        display: none;
+        
         .flex-card-image{
+            padding: 30px;
             .background{
                 border-radius: 0 50rem 50rem 0;
                 bottom: 0px;
@@ -89,15 +90,9 @@ p{
                 left: 0;
             }
         }
-        &.active{
-            display: flex;
-        }
     }
 }
 @media only screen and (min-width:1000px){
-
-
-        
     .flex-card{
         flex-direction: row;
         .flex-card-content{
@@ -116,37 +111,86 @@ p{
 
             .flex-card-image{
                 width: 100%;
-                .background{
-                }
             }
         }
-    }
-
-    
+    } 
 }
 
 /* End of Flex Card */
 
 /* Flex Slider */
+$slide-items-number:3;
+
 .slider{
     margin-top: 4rem;
     text-align: center;
-    .slider-tab {
-        display: none;
-        &::after{
+    .flex-cards-wrapper{
+        width: 100vw;
 
-        }
-        &:checked + .slider-tab-label{
-            border-bottom: 3px solid $soft-red;
-        }
+        display: block;
+        position: relative;
+        overflow: hidden;
     }
-    .slider-tab-label{
-        padding: 15px 20px;
-    }
-
     .flex-cards{
         margin-top: 4rem;
         display: flex;
+
+        transition: 0.5s ease-in-out;
+        //pacity: 0;
+        transform: translateX(0vw);
+        width: $slide-items-number * 100vw;
+        .flex-card{
+            
+            // display: flex;
+            width:100vw;
+        }
+    }
+    .slider-tab-label{
+        position: relative;
+        padding: 20px;
+        display: block;
+        width: calc(100% - 60px);
+        margin: auto;
+
+        &:before{
+            content: " ";
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -3px;
+            height: 1px;
+            background-color: $grayish-blue;
+        }
+    }
+    .slider-tab {
+        display: none;
+        
+        &:checked + .slider-tab-label{
+            &:before{
+                bottom: -3px;
+                height: 4px;
+                background-color: $soft-red;
+            }
+        }
+        @for $i from 1 through 3 {
+            &#option-#{$i}:checked ~ .flex-cards-wrapper .flex-cards{
+                opacity: 1;
+                transform: translateX(calc(#{$i - 1} * -100vw));
+            }
+            // &#option-#{$i}:checked ~ .flex-cards > .flex-card:nth-child(#{$i}){
+            //     transform: translateX(#{$i} * -100vw);
+            // }
+        }
+    }
+}
+
+@media only screen and (min-width:768px){
+
+    .slider{
+        .slider-tab-label{
+            width: auto;
+            display: inline-block;
+        }
     }
 }
 /* End Of Flex Slider*/
@@ -295,17 +339,13 @@ header{
     }
     .flex-card{
         .flex-card-content{
-            // padding: 15px;
+            
         }
         &.flex-card-reversed{
 
         }
     }
-    @for $i from 1 through 3 {
-        input[name="slider"]#option-#{$i}:checked ~ .flex-cards > .flex-card:nth-child(#{$i}){
-            display: flex;
-        }
-    }
+
     
 
 }
