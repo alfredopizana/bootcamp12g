@@ -41,51 +41,47 @@
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
             <div class="slider">
-                <input class="slider-tab" type="radio" id="option-1" name="slider" value="simple-bookmarking" checked>
-                <label class="slider-tab-label" for="option-1">Simple Bookmarking</label>
-                
-                <input class="slider-tab" type="radio" id="option-2" name="slider" value="speedy-searching">
-                <label class="slider-tab-label" for="option-2">Speedy Searching</label>
-                
-                <input class="slider-tab" type="radio" id="option-3" name="slider" value="easy-sharing">
-                <label class="slider-tab-label" for="option-3">Easy Sharing</label>
+                <input class="slider-tab" type="radio" id="option-1" name="slider" value="simple-bookmarking" checked><label class="slider-tab-label" for="option-1">Simple Bookmarking</label><input class="slider-tab" type="radio" id="option-2" name="slider" value="speedy-searching"><label class="slider-tab-label" for="option-2">Speedy Searching</label><input class="slider-tab" type="radio" id="option-3" name="slider" value="easy-sharing"><label class="slider-tab-label" for="option-3">Easy Sharing</label>
 
-
-                <divs class="flex-cards">
-                    <div class="flex-card flex-card-reversed" >
-                        <div class="flex-card-content">
-                            <h2>Bookmark in one click</h2>
-                            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                            <button class="btn-primary">More Info</button>
+                <div class="slider-divier"></div>
+                <div class="flex-cards-wrapper">
+                    <divs class="flex-cards">
+                        <div class="flex-card flex-card-reversed" >
+                            <div class="flex-card-content">
+                                <h2>Bookmark in one click</h2>
+                                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                                <button class="btn-primary">More Info</button>
+                            </div>
+                            <div class="flex-card-image">
+                                <div class="background"></div>
+                                <img class="" src="img/illustration-features-tab-1.svg" alt="">
+                            </div>
                         </div>
-                        <div class="flex-card-image">
-                            <div class="background"></div>
-                            <img class="" src="img/illustration-features-tab-1.svg" alt="">
+                        <div class="flex-card flex-card-reversed">
+                            <div class="flex-card-content">
+                                <h2>Intelligent search</h2>
+                                <p>Our powerful search feature will help you find saved sites in no time at all.No need to trawl through all of your bookmarks.</p>
+                                <button class="btn-primary">More Info</button>
+                            </div>
+                            <div class="flex-card-image">
+                                <div class="background"></div>
+                                <img class="" src="img/illustration-features-tab-2.svg" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex-card flex-card-reversed">
-                        <div class="flex-card-content">
-                            <h2>Intelligent search</h2>
-                            <p>Our powerful search feature will help you find saved sites in no time at all.No need to trawl through all of your bookmarks.</p>
-                            <button class="btn-primary">More Info</button>
-                        </div>
-                        <div class="flex-card-image">
-                            <div class="background"></div>
-                            <img class="" src="img/illustration-features-tab-2.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="flex-card flex-card-reversed">
-                        <div class="flex-card-content">
-                            <h2>Share your bookmarks/h2>
-                            <p>  Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                            <button class="btn-primary">More Info</button>
-                        </div>
-                        <div class="flex-card-image">
-                            <div class="background"></div>
-                            <img class="" src="img/illustration-features-tab-3.svg" alt="">
+                        <div class="flex-card flex-card-reversed">
+                            <div class="flex-card-content">
+                                <h2>Share your bookmarks</h2>
+                                <p>  Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                                <button class="btn-primary">More Info</button>
+                            </div>
+                            <div class="flex-card-image">
+                                <div class="background"></div>
+                                <img class="" src="img/illustration-features-tab-3.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+                
 
             </div>
             
@@ -164,17 +160,21 @@
             <button>More Info</button>
         </section>
         <footer>
-            <div class="contact-us">
-                <p class="footer-titulo">35,000 +  ALREADY JOINED</p>
-                <p>Stay up-to-date with what we´re doing</p>
-                <form action="">
-                    <div><input type="email" placeholder="Enter your email address" required ></div>
-                    <div><button> Contact us</button></div>
-                </form>
+            <div class="footer-contact">   
+                <div class="contact-us">
+                    <p class="footer-titulo">35,000 +  ALREADY JOINED</p>
+                    <p>Stay up-to-date with what we´re doing</p>
+                    <form action="">
+                        <input type="email" id="email" placeholder="Enter your email address" required >
+                        <button> Contact us</button>
+                    </form>
+                </div>
             </div>
             <div class="footer-links">
                 <div class="footer-list-wrapper">
-                    <img src="img/logo-bookmark.svg" class="logo-footer" alt="">
+                    <div class="footer-list-wrapper-image">
+                        <img src="img/logo-bookmark.svg" class="logo-footer" alt="">
+                    </div>                    
                     <ul>
                         <li>FEATURES</li>
                         <li>PRICING</li>
