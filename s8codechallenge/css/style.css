@@ -143,10 +143,11 @@ p {
 .slider {
   margin-top: 4rem;
   text-align: center;
+  width: 100%;
 }
 
 .slider .flex-cards-wrapper {
-  width: 100vw;
+  width: 100%;
   display: block;
   position: relative;
   overflow: hidden;
@@ -305,10 +306,10 @@ header nav ul {
         -ms-flex-align: center;
             align-items: center;
     letter-spacing: 1px;
-    color: black;
   }
   header nav ul li a {
     text-decoration: none;
+    color: black;
   }
   header nav ul .login {
     background-color: #fa5757;
@@ -355,6 +356,7 @@ header nav ul {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 5rem;
+  width: 100%;
 }
 
 .features > h2 {
@@ -568,7 +570,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  width: 100vw;
 }
 
 footer .footer-contact {
@@ -708,6 +709,10 @@ footer .footer-links .footer-list-wrapper {
   padding: 2rem;
 }
 
+footer .footer-links .footer-list-wrapper .footer-list-wrapper-image svg path {
+  fill: white;
+}
+
 footer .footer-links .footer-list-wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -761,8 +766,13 @@ footer .footer-links .footer-social-wrapper img {
             align-items: center;
   }
   footer .footer-contact .contact-us {
-    width: 40%;
-    padding: 2em;
+    width: 32%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  footer .footer-contact .contact-us div {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   footer .footer-contact .contact-us form {
     display: -webkit-box;
@@ -778,12 +788,13 @@ footer .footer-links .footer-social-wrapper img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 1rem;
   }
   footer .footer-contact .contact-us form #email {
-    width: 70%;
+    width: 65%;
   }
   footer .footer-contact .contact-us form button {
-    width: 25%;
+    width: 30%;
   }
   footer .footer-links {
     display: -webkit-box;
