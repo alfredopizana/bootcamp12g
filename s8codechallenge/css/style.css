@@ -406,6 +406,8 @@ header nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px;
+  gap: 30px;
+  justify-content: center;
 }
 
 .extensions .cards .card-wrapper {
@@ -428,6 +430,10 @@ header nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 30px 0px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 4px 7px 0px #9194a1;
+          box-shadow: 1px 4px 7px 0px #9194a1;
 }
 
 .extensions .cards .card-wrapper .card img {
@@ -440,9 +446,16 @@ header nav ul {
   width: 200px;
   height: 40px;
   border-radius: 5px;
+  border: 2px solid #5368df;
   font-weight: bold;
   -webkit-box-shadow: 1px 4px 7px 0px #9194a1;
           box-shadow: 1px 4px 7px 0px #9194a1;
+}
+
+.extensions .cards .card-wrapper .card button:hover {
+  background-color: white;
+  border: 2px solid #5368df;
+  color: #5368df;
 }
 
 @media only screen and (min-width: 768px) {
@@ -461,10 +474,12 @@ header nav ul {
     /*  width: 80%; */
   }
   .extensions .cards .card-wrapper.fire {
-    margin-top: 50px;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   .extensions .cards .card-wrapper.opera {
-    margin-top: 100px;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
 }
 

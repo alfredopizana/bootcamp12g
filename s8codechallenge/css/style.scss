@@ -395,7 +395,8 @@ header{
         flex-direction: column;
         justify-content: center;
         padding: 10px;
-
+        gap: 30px;
+        justify-content: center;
         .card-wrapper{
             display: flex;
             justify-content: center;
@@ -404,6 +405,9 @@ header{
                 flex-direction: column;
                 display: flex;
                 align-items: center;
+                padding: 30px 0px;
+                border-radius: 5px;
+                @include global-box-sadow();
 
                 img{
                 padding: 30px;
@@ -415,8 +419,14 @@ header{
                 width: 200px;
                 height: 40px;
                 border-radius: 5px;
+                border: 2px solid $soft-blue;
                 font-weight: bold;
                 @include global-box-sadow;
+                    &:hover{
+                        background-color: white;
+                        border: 2px solid $soft-blue;
+                        color: $soft-blue;
+                    }
                 }
             }
         }
@@ -437,6 +447,7 @@ header{
 
         display: flex;
         flex-direction: row;
+        
 
 /*  width: 80%; */
         
@@ -444,11 +455,13 @@ header{
         .card-wrapper{
 
             &.fire{
-                margin-top: 50px;
+                //margin-top: 50px;
+                transform: translateY(50px);
             }
 
             &.opera{
-                margin-top: 100px;
+                //margin-top: 100px;
+                transform: translateY(100px);
             }
 
         }
