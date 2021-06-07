@@ -543,6 +543,11 @@ header nav ul {
   right: 10px;
 }
 
+.faq .question img:hover {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
 .faq button {
   display: block;
   background-color: #5368df;
@@ -559,10 +564,17 @@ header nav ul {
           box-shadow: 1px 4px 7px 0px #9194a1;
 }
 
+.faq button:hover {
+  background-color: white;
+  border: 2px solid #5368df;
+  color: #5368df;
+}
+
 @media only screen and (min-width: 768px) {
   .faq {
     display: block;
     width: 600px;
+    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
   }

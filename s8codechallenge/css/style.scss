@@ -512,6 +512,7 @@ header{
             bottom: 0;
             left: 15px;
             right: 15px;
+          
         }
 
         p{
@@ -522,6 +523,12 @@ header{
             margin-top: 12px;
             position: absolute;
             right: 10px;
+            &:hover{
+                -webkit-transform: rotate(-180deg);
+                -moz-transform: rotate(-180deg);
+                -ms-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
         }
     }
 
@@ -538,6 +545,11 @@ header{
         margin-right: auto;
         font-weight: bold;
         @include global-box-sadow;
+        &:hover{
+            background-color: white;
+            border: 2px solid $soft-blue;
+            color: $soft-blue;
+        }
     }
 }
 
@@ -546,6 +558,7 @@ header{
 
         display:block;
         width: 600px;
+        margin-top: 200px;
         margin-left: auto;
         margin-right: auto;
         
