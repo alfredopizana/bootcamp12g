@@ -155,16 +155,11 @@ $slide-items-number:3;
         overflow: hidden;
     }
     .flex-cards{
-        margin-top: 4rem;
         display: flex;
-
         transition: 0.5s ease-in-out;
-        //pacity: 0;
         transform: translateX(0vw);
         width: $slide-items-number * 100vw;
         .flex-card{
-            
-            // display: flex;
             width:100vw;
         }
     }
@@ -189,6 +184,17 @@ $slide-items-number:3;
         }
         &:hover{
             color: $soft-red;
+        }
+    }
+    .slider-tab-label:first-of-type{
+        &:after{
+            content: " ";
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: -3px;
+            height: 2px;
+            background-color: $light-gray;
         }
     }
     .slider-tab {
@@ -222,6 +228,18 @@ $slide-items-number:3;
             width: auto;
             display: inline-block;
         }
+        .slider-tab-label:first-of-type{
+            &:after{
+                    content: " ";
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    top: -3px;
+                    height: 2px;
+                    background-color: transparent;
+            }
+        }
+
     }
 }
 /* End Of Flex Slider*/
@@ -386,7 +404,13 @@ header{
     }
     .flex-card{
         .flex-card-content{
-           
+            margin-top: 1rem;
+           text-align: center;
+           h2{
+                font-size: 2rem;
+                font-size: 2rem;
+                font-weight: 500;
+            }
         }
         &.flex-card-reversed{
 
@@ -404,15 +428,18 @@ header{
 }
     
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:1000px){
 
+    
     .features{
 
         .flex-card{
 
             .flex-card-content{
+                text-align: left;
+                margin-top: 0px;
                 h2{
-                    
+                    font-size: 3rem;
                 }
             }
         }
@@ -505,12 +532,10 @@ header{
         .card-wrapper{
 
             &.fire{
-                //margin-top: 50px;
                 transform: translateY(50px);
             }
 
             &.opera{
-                //margin-top: 100px;
                 transform: translateY(100px);
             }
 
@@ -646,7 +671,6 @@ footer{
                 justify-content: center;  
                 align-items: center;                    
                 width: 80%;              
-                /*background-color: pink; */
                 padding-top:3rem;
                 padding-bottom:3rem;
 

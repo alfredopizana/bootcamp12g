@@ -180,7 +180,6 @@ p {
 }
 
 .slider .flex-cards {
-  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,6 +220,16 @@ p {
   color: #fa5757;
 }
 
+.slider .slider-tab-label:first-of-type:after {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -3px;
+  height: 2px;
+  background-color: #f7f7f7;
+}
+
 .slider .slider-tab {
   display: none;
 }
@@ -257,6 +266,15 @@ p {
   .slider .slider-tab-label {
     width: auto;
     display: inline-block;
+  }
+  .slider .slider-tab-label:first-of-type:after {
+    content: " ";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -3px;
+    height: 2px;
+    background-color: transparent;
   }
 }
 
@@ -420,9 +438,30 @@ header nav ul {
   margin-bottom: 15px;
 }
 
+.features .flex-card .flex-card-content {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.features .flex-card .flex-card-content h2 {
+  font-size: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .features .flex-card .flex-card-image img {
   margin-bottom: 60px;
   width: 80%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .features .flex-card .flex-card-content {
+    text-align: left;
+    margin-top: 0px;
+  }
+  .features .flex-card .flex-card-content h2 {
+    font-size: 3rem;
+  }
 }
 
 /* End of Features */
@@ -690,7 +729,6 @@ footer .footer-contact .contact-us {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  /*background-color: pink; */
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
