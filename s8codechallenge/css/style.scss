@@ -3,7 +3,7 @@ $soft-blue:     hsl(231, 69%, 60%);
 $soft-red:      hsl(0, 94%, 66%);
 $grayish-blue:  hsl(229, 8%, 60%);
 $very-dark-blue:  hsl(229, 31%, 21%);
-$light-gray: #eaf0f5;
+$light-gray: #f7f7f7;
 
 @mixin global-box-sadow{
     box-shadow: 1px 4px 7px 0px $grayish-blue;
@@ -34,7 +34,7 @@ p{
     padding:12px 20px;
     border: none;
     border-radius: 5px;
-    margin-right: 15px;
+    margin-right: 10px;
     @include global-box-sadow;
     cursor: pointer;
     font-weight: 500;
@@ -328,6 +328,13 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
     .flex-card{
+        .flex-card-content{
+            h2{
+                font-size: 2rem;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
     }
 }
     
