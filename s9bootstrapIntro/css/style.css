@@ -1,0 +1,10 @@
+main {
+  height: 500px;
+}
+
+@media only screen and (min-width: 576px) {
+  main {
+    height: 800px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
