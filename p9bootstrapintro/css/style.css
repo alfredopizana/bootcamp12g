@@ -1,0 +1,79 @@
+/* Global Variables */
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+html, body {
+  font-size: 13px;
+  background-color: #ecf2f8;
+}
+
+main {
+  margin-top: 3em;
+}
+
+.bg-purple {
+  background-color: #7541c8;
+  color: #ecf2f8;
+}
+
+.bg-gray {
+  background-color: #48556a;
+  color: #ecf2f8;
+}
+
+.bg-dark-blackish {
+  background-color: #19212e;
+  color: #ecf2f8;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.card {
+  border: none;
+  padding: 2.5rem;
+  border-radius: 0.9rem;
+  height: 100%;
+}
+
+.card.quotation-mask {
+  background-image: url(../img/bg-pattern-quotation.svg);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+}
+
+.card .card-header {
+  background-color: transparent;
+  border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  padding-bottom: 1.5rem;
+}
+
+.card .card-header img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid #cfcfcf;
+}
+
+.card .card-header .profile-info {
+  margin-left: 8px;
+}
+
+.card .card-header .profile-info p {
+  margin-bottom: 0px;
+}
+
+.card .card-block {
+  padding: 0rem;
+}
+/*# sourceMappingURL=style.css.map */
