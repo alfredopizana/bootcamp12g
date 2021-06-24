@@ -82,3 +82,8 @@ formatKoderList(koders2)
     .reduce
 
 */
+function formatKoderListAdvaced(koderList){
+    var customKoderList = koderList.reduce(function(customList,item){
+        
+    },[]);
+}
