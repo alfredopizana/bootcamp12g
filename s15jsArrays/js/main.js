@@ -86,15 +86,14 @@ console.log(bands);
      "Metall...":["So What","Nothing Else Matters"],"'Led Zep..":["",""],"Poets of the Fall"
     ]
 */
-let songsByBand = (bandNames, songsData )=>{
-    //sognNames=>  ["Led Zeppelin", "Nirvana", "Metallica", "Poets of the Fall"]
+let getSongsByBand = (bandNames, songsData )=>{
     let songsByBand = []
     bandNames.forEach(bandName => {
         songsByBand[bandName] = songsData.filter( ({ band  }) => band == bandName ).map(songObject=> songObject.name )
     });
-    console.log(songsByBand);
+    return songsByBand; 
 }
-songsByBand( songNames(songsData), songsData)
+let songsByBand = getSongsByBand( songNames(songsData), songsData)
 
 /*
   saber cuál es la canción con más likes
@@ -104,15 +103,22 @@ songsByBand( songNames(songsData), songsData)
 /*saber cuál es la canción con más reproducciones
 ( nombre de la canción y nombre de la banda)
 */
-let topSong = (data, filterBy) =>{
+//Get Top song
+//data : Array of songs
+//filterBy: filter param to get the top song e.g. "likes", "Reproductions"
+let topSong = (songs, filterBy) =>songs.reduce( (topSogn,currentSogn) => currentSogn.statistics[filterBy] > topSogn.statistics[filterBy] ? currentSogn : topSogn)
+let printTopSong = (song,filterBy) => console.log(`La cancion ${song.name} de la banda ${song.band} es la cancion con mas ${filterBy} ${song.statistics.likes}`)
+//printTopSong
+//song : The current song object
+//filterBy: filter param from it was filtered. "likes", "Reproductions"
+printTopSong (topSong(songsData,'likes'))
+printTopSong (topSong(songsData,'reproductions'))
 
-    let song = data.reduce( (topSogn,currentSogn) =>{
-        if(!topSogn.statistics)
-            return currentSogn
-        return currentSogn.statistics[filterBy] > topSogn.statistics[filterBy] ? currentSogn : topSogn
-    },{})
-    console.log(`La cancion ${song.name} de la banda ${song.band} es la cancion con mas ${filterBy} ${song.statistics.likes}`)
-} 
-topSong(songsData,'likes')
-topSong(songsData,'reproductions')
 
+
+//Ignore
+//let topSognPipe = (...functions) => params => functions.reduce( (functionAccum, fn) => fn(functionAccum) ,input)
+//let topSognPipe = (...functions) => input => functions(input);
+//topSognPipe(topSong,topSong)
+
+//topSognPipe([songsData,'likes'])
