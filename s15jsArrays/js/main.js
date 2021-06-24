@@ -58,14 +58,8 @@ let songsData = [
     agrupar únicamente los nombres de las bandas, sin repeticiones
     */
  let songNames = songsData =>{
-    return songsData.reduce((songList,song)=>{
-
-        //Acum, CurrentValue
-         let band = song.band;
-        //1 - sognList => []
-        //2 - sognList => ["Led Z....'"]
+    return songsData.reduce((songList,{ band })=>{ 
         songList.indexOf(band) == -1 && songList.push(band)
-        //["Led Z....'", ""]
         return songList;
      }, [])
  }
@@ -105,33 +99,20 @@ songsByBand( songNames(songsData), songsData)
 /*
   saber cuál es la canción con más likes
   ( nombre de la canción y nombre de la banda)
-  */
-
-let topSong = data =>{
-
-    let song = data.reduce( (topSogn,currentSogn) =>{
-        if(!topSogn.statistics)
-            return currentSogn
-        return currentSogn.statistics.likes > topSogn.statistics.likes ? currentSogn : topSogn
-    },{})
-    console.log(song)
-    console.log(`La cancion ${song.name} de la banda ${song.band} es la cancion con mas likes ${song.statistics.likes}`)
-} 
-topSong(songsData)
+*/
 
 /*saber cuál es la canción con más reproducciones
 ( nombre de la canción y nombre de la banda)
 */
-let topSongByReproductions = data =>{
+let topSong = (data, filterBy) =>{
 
     let song = data.reduce( (topSogn,currentSogn) =>{
         if(!topSogn.statistics)
             return currentSogn
-            currentSogn.statistics.reproductions
-            var param = "reproductions"
-        return currentSogn.statistics[param] > topSogn.statistics["reproductions"] ? currentSogn : topSogn
+        return currentSogn.statistics[filterBy] > topSogn.statistics[filterBy] ? currentSogn : topSogn
     },{})
-    console.log(song)
-    console.log(`La cancion ${song.name} de la banda ${song.band} es la cancion con mas reproduccionesS ${song.statistics.likes}`)
+    console.log(`La cancion ${song.name} de la banda ${song.band} es la cancion con mas ${filterBy} ${song.statistics.likes}`)
 } 
-topSongByReproductions(songsData)
+topSong(songsData,'likes')
+topSong(songsData,'reproductions')
+
