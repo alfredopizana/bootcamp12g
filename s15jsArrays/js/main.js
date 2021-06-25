@@ -59,6 +59,7 @@ let songsData = [
     */
  let songNames = songsData =>{
     return songsData.reduce((songList,{ band })=>{ 
+        //add a new element if it does not already exit on the list
         songList.indexOf(band) == -1 && songList.push(band)
         return songList;
      }, [])
@@ -71,6 +72,7 @@ console.log(bands);
 /*
   Agrupar las canciones de cada banda
 */
+
 /*
 [
     {
@@ -89,12 +91,20 @@ console.log(bands);
 let getSongsByBand = (bandNames, songsData )=>{
     let songsByBand = []
     bandNames.forEach(bandName => {
-        songsByBand[bandName] = songsData.filter( ({ band  }) => band == bandName ).map(songObject=> songObject.name )
+        //filter elements by bands and then add the bands names to the array
+        //songsByBand[bandName] = songsData.filter( ({ band  }) => band == bandName ).map(songObject=> songObject.name )
+
+        //We can user reduce instead of filter map
+        songsByBand[bandName] = songsData.reduce( (list, {band,name} )=>{
+            if(band === bandName )
+                list.push(name)
+            return list
+    },[])
     });
     return songsByBand; 
 }
 let songsByBand = getSongsByBand( songNames(songsData), songsData)
-
+console.log(songsByBand)
 /*
   saber cuál es la canción con más likes
   ( nombre de la canción y nombre de la banda)
