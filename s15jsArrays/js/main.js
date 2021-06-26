@@ -101,10 +101,22 @@ let getSongsByBand = (bandNames, songsData )=>{
             return list
     },[])
     });
+
+    
+
     return songsByBand; 
 }
 let songsByBand = getSongsByBand( songNames(songsData), songsData)
 console.log(songsByBand)
+Object.keys(songsByBand).forEach(({key,value}, index, self)=>{
+  //(value, index, self)
+  //(key,index)
+  console.log(`hola`)
+  //console.log(`index: ${index}: ${this[key]}`)
+  console.log(key, index, self)
+  console.log(value, index, self)
+  console.log(songsByBand[value])
+},songsByBand);
 /*
   saber cuál es la canción con más likes
   ( nombre de la canción y nombre de la banda)

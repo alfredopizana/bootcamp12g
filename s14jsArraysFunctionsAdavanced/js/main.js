@@ -50,7 +50,7 @@ let anotherObjetArray = []
 dataArray.forEach(item =>anotherObjetArray.push(destructuringObject(item)))
 //console.log(anotherObjetArray)
 //Arguments Tests
-
+/*
 function test(a,b){
     console.log(a,b)
     console.log(arguments)
@@ -70,4 +70,4 @@ test(  [
 [
     "4 Michael",
     "Villalba Sotelo"
-])
+])*/
