@@ -101,9 +101,9 @@ let convertedArray = (list) => {
 return list.reduce(
             (accum,{name}) =>{
             let initials = name.split(" ").map(text => text.charAt(0)).join(". ");
-            accum.push(initials)
+            //accum.push(initials)
 
-            return accum
+            return [...accum,initials]
         },[]) 
     }
     console.log(convertedArray(mentorsArray))
