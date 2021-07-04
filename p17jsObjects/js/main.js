@@ -24,7 +24,6 @@ los objetos deben estar dentro de una colección llamada mentorsArray
 */
 
 function Mentor([name,lastname]){
-    	
     const _getInitials = (_name, _lastname) => {
         return [..._name.split(" "),..._lastname.split(" ")]
             .reduce( 
@@ -40,7 +39,12 @@ function Mentor([name,lastname]){
 }
 
 //let mentor = new Mentor(dataArray[0][0],dataArray[0][1])
-
+/*
+   [
+        0 : "Charles",
+        1: "Silva"
+    ]
+*/
 let mentorsArray = dataArray.reduce((list,mentor)=>[...list,new Mentor(mentor)],[])
 console.log(mentorsArray)
 console.table(mentorsArray)
