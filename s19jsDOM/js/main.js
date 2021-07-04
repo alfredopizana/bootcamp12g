@@ -18,11 +18,3 @@ names.forEach((name,index)=>{
     //Insert the li node into the ul
     unorderedList.appendChild(paragraphElement)
 })
-
-BT930818
-
-
-!Ve1808..
-
-
-BIMEMXMMXXX
