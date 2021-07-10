@@ -4,6 +4,7 @@ let table = document.querySelector("table")
 let tableBody = table.querySelector("tbody")
 console.log(form)
 console.log(inputs)
+
 var people = [
     {
         index: "0",
@@ -26,6 +27,7 @@ var people = [
         lastname: "Ortega"
     },
 ]
+
 function Person(index,name,lastname){
     this.index = index
     this.name = name
@@ -40,6 +42,8 @@ let updateTable = (list,tableBodyContainer)=>{
     });
     
 }
+
+
 let createRowNode =(person )=>{
     //Create Row Container
     let row = document.createElement("tr")
