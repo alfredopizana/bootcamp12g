@@ -1,8 +1,22 @@
 const express = require('express');
 
-const server = express();
 
-server.use(express.json());
+const fs = require('fs');
+const server = express();
+const objectKodemia = JSON.parse(fs.readFileSync('./koders.json'))
+
+function readFilePromise(pathToRead){
+    return new Promise((resolve,reject)=>{
+        fs.readFile(pathToRead,'utf8',(err,content)=>{
+            if(err){
+                reject(err)
+            }else{
+                resolve(content)
+            }
+        })
+    })
+}
+
 
 server.get('/',(request,response)=>{
     response.writeHead(200,{'Content-Type':'application/json'})
@@ -24,6 +38,19 @@ server.post('/mentors',(request,response)=>{
     // response.end();
     response.status(201).json(message)
 });
+
+server.get('/read',(req,res)=>{
+    readFilePromise('koders.json')
+    .then((content)=>{
+        const arrayKoders = JSON.parse(content);
+        res.json({arrayKoders})
+    })
+    .catch((err)=>{
+        res.status(400).json({error:"No se pudo leer archivo"})
+    })
+})
+
+
 server.listen(8080,()=>{
     console.log("Server Runnin http://locahost:8080");
 })
