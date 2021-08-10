@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "filesync": "node fileSync.js",
-    "dev": "nodemon fileSync.js"
+    "dev": "nodemon fileSync.js",
+    "stage": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
