@@ -1,4 +1,5 @@
 const express = require("express")
+const koderRouter = require("./routerKoders")
 const server = express()
 
 
@@ -36,15 +37,8 @@ server.get("/", (request, response) => {
         message: "Hola Koders"
     })
 })
-server.get("/koders", (request,response,next)=>{
-    console.log("Middleware a la ruta GET /koders")
-    next()
-},(request, response) => {
-    response.json({
-        message: "Hola Koders"
-    })
-})
 
+server.use("/koders",koderRouter)
 server.listen(8080, () => {
     console.log("Server running")
 })
