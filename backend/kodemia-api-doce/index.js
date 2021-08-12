@@ -10,3 +10,10 @@ dbConnect()
         console.log("Server listening...")
 })
 }).catch(err=>console.log(err))
+
+
+//Requerimiento 
+//Endpoint Get Koders
+//1. Asegurarnos que nuestro modelo exista
+//2. Crear caso de uso necesario.
+//3. Crear Endpoint
