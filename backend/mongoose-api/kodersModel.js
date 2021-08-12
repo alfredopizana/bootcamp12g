@@ -5,24 +5,24 @@ const koderSchema = new mongoose.Schema({
         type: String,
         minLength: 2,
         maxLength: 50,
-        require: true
+        required: true
     },
     lastName: {
         type: String,
         minLength: 2,
         maxLength: 50,
-        require: true
+        required: true
     },
     age: {
         type: Number,
         min: 0,
         max: 90,
-        require: true
+        required: true
     },
     gender: {
         type: String,
         enum: ['m', 'f'],
-        require: true
+        required: true
     }
 })
 
