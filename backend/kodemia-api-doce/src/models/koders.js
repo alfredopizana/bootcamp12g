@@ -23,6 +23,15 @@ const koderSchema = new mongoose.Schema({
         type: String,
         enum: ['m', 'f'],
         required: true
+    },
+    password: {
+        type: String,
+        required:true
+    },
+    email: {
+        type: String,
+        required: true,
+        match: /.+@.*\..*/
     }
 })
 
