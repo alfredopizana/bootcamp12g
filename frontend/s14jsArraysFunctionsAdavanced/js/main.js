@@ -33,7 +33,6 @@ dataArray.forEach(item =>arrayObjets.push(createObject(item)))
 //You can assign destructurings not only to variables but also to existing objects:
 
 const arr = [1,2,3], o = {};    
-({0:o.one, 1:o.two, 2:o.three} = arr);
 //console.log(o)
 
 
