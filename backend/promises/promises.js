@@ -14,7 +14,7 @@ const promesa = new Promise((resolve,reject)=>{
     console.log('se ejecuta promesa')
 })
 
-promesa
+//promesa
 // .then((response)=>{
 //     console.log(response)
 // }).catch((response)=>{
